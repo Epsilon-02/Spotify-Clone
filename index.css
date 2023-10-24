@@ -202,6 +202,7 @@ html{
 .cards{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 7rem;
     color: #fff;
     height: 20rem;
