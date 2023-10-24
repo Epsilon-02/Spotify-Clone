@@ -3,6 +3,11 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -18,13 +23,251 @@
     background: #1FDF64;
 }
 
-#container{
-    height:200vh;
-    background-color: rgb(45, 44, 44);
+/* --------this is main body--------------- */
+
+.container{
+    padding: 0.5rem;
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    row-gap: 2rem;
+}
+
+/* Banner */
+.banner{
+    border: 2px solid black;
+    width: 85vw;
+    height: 22rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    background-color: rgb(18, 18, 18);
+    padding: 1rem;
+    column-gap: 2vw;
+    align-self: center;
+}
+
+#box_1{
+    grid-column: 2 / 3;
+    color: #fff;
+    align-self: center;
+    font-weight: 600;
+}
+
+#box_2{
+    grid-column: 4 / 5;
+    font-weight: 700;
+    font-size: 0.8em;
+    align-self: center;
+    justify-self: end;
+    margin: 0 2em;
+    padding: 0.2em;
+}
+
+#box_2 span{
+    background-color: black;
+    border-radius: 2em;
+}
+
+#box_3{
+    grid-row: 2 / 5;
+    padding: 1em;
+    height: 15em;
+    width: 15em;
+    align-self: center;
+    justify-self: center;
+    background-image: url('Spotify assets/best-song.jpg');
+    background-size: cover;
+}
+
+#box_4{
+    padding: 0;
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    font-size: 5.5em;
+    letter-spacing: 0.1em;
+    line-height: 100%;
+    font-weight: 900;
+}
+
+#box_4 span{
+    text-decoration: underline;
+}
+
+#box_5{
+    grid-column: 2 / 5;
+    font-weight: 600;
+    align-self: center;
+    line-height: 1.5em;
+}
+
+#box_6{
+    grid-column: 2 / 5;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5em;
+    padding: 0.5em;
+}
+
+.play{
+    color: rgb(18, 18, 18);
+    background-color: rgb(30, 215, 96);
+    padding: 1em 2em;
+    font-size: 1em;
+    border-radius: 2em;
+    font-weight: 900;
+    border: 1px solid rgb(30, 215, 96);
+}
+
+.play:hover{
+    border: 2px solid rgb(30, 215, 96);
+    transform: scale(1.05);
+}
+
+.unfollow{
+    background-color: rgb(18, 18, 18);
+    color: rgb(30, 215, 96);
+    font-weight: 900;
+    font-size: 1em;
+    padding: 1em 2em;
+    border-radius: 2em; 
+    border: 1px solid #fff;
+}
+
+.unfollow:hover{
+    border: 2px solid #fff;
+    transform: scale(1.05);
+}
+
+#box_6 i{
+    font-size: 2.5em;
+    color: rgb(200, 200, 200);
+}
+
+#box_6 i:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Greeting */
+
+#hrList{
+    font-size: 1.7rem ;
+    font-weight: 900;
+}
+
+/* recent playlist */
+
+.recent{
+    width: 100%;
+    height: 13rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.rbox{
+    background-color: rgb(45,45,45);
+    border-radius: 0.3em;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    column-gap: 1em;
+    align-items: center;
+    font-weight: 600;
+}
+
+.rbox span img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+@media (max-width: 700px){
+    .banner{
+        display: none;
+    }
+    .recent{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    height: 7rem;
+    color: #fff;
+    height: 20rem;
+    row-gap: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.card_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.card_header h3{
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.card_header h6{
+    color: rgb(170,170,170);
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 15em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    background-color: rgb(45,45,45);
+    height: 90%;
+    width: 80%;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7em;
+    padding: 0.7em;
+}
+
+.card_img {
+    width: 100%;
+    height: 70%;
+}
+
+.card_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4em;
+}
+
+.card_title{
+    font-weight: 800;
+}
+
+.card_subtitle{
+    font-weight: 600;
+    color: rgb(170,170,170);
+}
 
 /*--------this is footer section-----------*/
 
-}
 
 footer{
     position: fixed;

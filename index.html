@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
     
     <!---There are two major sections 1) 3 grids 2) footer-->
-    
-     <section id="container"> 
+     
          <!--This grid contains home and search-->
          <div class="grid">
              <div id="home">"HOME ICON" <span>Home</span></div>
@@ -70,28 +70,167 @@
 
             </header>
 
-            <div id="banner">
-                    
-            </div>
-
-            <div id="hrList">
-                
-            </div>
-            
-            <!--We can keep adding cards section as required-->
-            <div class="cards">
-                <h1>Title</h1>
-                <span>Show all</span>
-                <div class="cardContainer">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+            <section class="container"> 
+                <div class="banner">
+                    <div class="banner_box" id="box_1">Playlist</div>
+                    <div class="banner_box" id="box_2"><span>Sponsored</span></div>
+                    <div class="banner_box" id="box_3"></div>
+                    <div class="banner_box" id="box_4"><span>BEST <br>ENGLISH</span>...</div>
+                    <div class="banner_box" id="box_5">Listen to biggest english songs, only on the Best English Songs <br>Playlist! Follow now!</div>
+                    <div class="banner_box" id="box_6">
+                        <button class="play">Play</button>
+                        <button class="unfollow">Unfollow</button>
+                        <i class='bx bx-dots-horizontal-rounded'></i>
+                    </div>
                 </div>
-            </div>
-         </div>
-
-     </section>
+    
+                <div id="hrList">
+                   <h2> Good evening</h2>
+                </div>
+    
+                <div class="recent">
+                    <div class="rbox" id="rbox_"><span><img src="Spotify assets/liked-song.jpg" alt=""></span>Liked Songs</div>
+                    <div class="rbox" id="rbox_"><span><img src="Spotify assets/playlist-cover.png" alt=""></span>Playlist 1</div>
+                    <div class="rbox" id="rbox_"><span><img src="Spotify assets/playlist-cover.png" alt=""></span>Playlist</div>
+                    <div class="rbox" id="rbox_"><span><img src="Spotify assets/playlist-cover.png" alt=""></span>Playlist</div>
+                    <div class="rbox" id="rbox_"><span><img src="Spotify assets/playlist-cover.png" alt=""></span>Playlist</div>
+                    <div class="rbox" id="rbox_"><span><img src="Spotify assets/playlist-cover.png" alt=""></span>Playlist</div>
+                </div>
+                
+                <!--We can keep adding cards section as required-->
+                <div class="cards">
+                    <div class="card_header">
+                        <h3>Jump back in</h3>
+                        <h6>Show all</h6>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <div class="card_header">
+                        <h3>Top hits</h3>
+                        <h6>Show all</h6>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""></div>
+                            <div class="card_title">Top hits!</div>
+                            <div class="card_subtitle">Singer</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="cards">
+                    <div class="card_header">
+                        <h3>Daily mix</h3>
+                        <h6>Show all</h6>
+                    </div>
+                    <div class="cardContainer">
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                        <div class="card" id="cardid_">
+                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""></div>
+                            <div class="card_title">Eternal Bliss</div>
+                            <div class="card_subtitle">Just let it go!</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+     
 
      <footer>
         
