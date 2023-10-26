@@ -325,6 +325,26 @@ html{
     width: 100%;
     height: 70%;
 }
+.card_img span{
+    position: relative;
+    z-index: 1;
+    top: -30%;
+    left: 65%;
+    width: 20%;
+    height: 20%;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+.card:hover{
+   .card_img span{
+    opacity: 1;
+    transform: translateY(-15%);
+   }
+
+   .fa-circle-play{
+    color: #1FDF64;
+   }
+}
 
 .card_img img{
     width: 100%;
