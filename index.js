@@ -142,3 +142,12 @@ function musicplay(text_img){
     let songname = foot.querySelector('h2')
     songname.innerHTML = elem.querySelector('.card_title').innerHTML;
 }
+function play(){
+    let flag=document.querySelector('play');
+    if(flag.innerHTML=="Play"){
+        flag.innerHTML="Pause";
+    }
+    else{
+        flag.innerHTML="Play";
+    }
+}
