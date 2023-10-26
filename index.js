@@ -144,7 +144,7 @@ function musicplay(text_img){
 }
 function play(){
     let flag=document.querySelector('play');
-    if(flag.innerHTML=='play'){
+    if(flag.innerHTML=='Play'){
         flag.innerHTML='Pause';
     }
     else{
