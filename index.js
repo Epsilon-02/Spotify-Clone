@@ -86,3 +86,59 @@ fNoSound.addEventListener("click", ()=>{
     fSound.classList.toggle("active");
     fNoSound.classList.toggle("active");
 })
+
+//----------------------Extra Functionalities----------------------
+
+
+//Unfollow to Follow
+function follow()
+{
+    let flag = document.getElementById('unfollow').innerHTML;
+    if(flag == "Unfollow"){
+        document.getElementById('unfollow').innerHTML = "Follow";
+    }
+    else{
+        document.getElementById('unfollow').innerHTML = "Unfollow"
+    }
+}
+
+//Hovering Effect
+
+function Hover(text_id,flag){
+    const translateX = 0; 
+    const translateY = -10;  
+    element = document.getElementById(text_id,flag);
+    if(flag == false){
+        element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    }
+    else{
+        element.style.transform = `translate(${translateX}px, ${-translateY}px)`;
+    }
+}
+
+//show all and show less
+function show(text_show,text_button){
+    let dec = document.getElementById(text_show);
+    if(dec.style.display == "grid"){
+        dec.style.display = "none";
+        document.getElementById(text_button).innerHTML = "<b>Show All</b>";
+    }
+    else{
+        dec.style.display = "grid";
+        document.getElementById(text_button).innerHTML = "<b>Show Less</b>";
+
+    }
+}
+
+// updating footer according to music selection
+function musicplay(text_img){
+    let elem = document.getElementById(text_img);
+    let old_img = elem.querySelector('img');
+
+    let foot = document.getElementById('footerSong');
+    let new_img = foot.querySelector('img');
+    new_img.src = old_img.src;
+
+    let songname = foot.querySelector('h2')
+    songname.innerHTML = elem.querySelector('.card_title').innerHTML;
+}

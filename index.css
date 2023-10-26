@@ -122,8 +122,10 @@ html{
 }
 
 .play:hover{
+    cursor: pointer;
     border: 2px solid rgb(30, 215, 96);
     transform: scale(1.05);
+
 }
 
 .unfollow{
@@ -134,11 +136,14 @@ html{
     padding: 1em 2em;
     border-radius: 2em; 
     border: 1px solid #fff;
+    width: 140px;
+    margin: 5px;
 }
 
 .unfollow:hover{
     border: 2px solid #fff;
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 #box_6 i{
@@ -209,6 +214,7 @@ html{
     row-gap: 1rem;
     margin-bottom: 0.7rem;
 }
+
 
 .card_header{
     display: flex;
@@ -557,6 +563,43 @@ footer{
 
 #footerTools i:hover.active{
     color:#1FDF64;
+}
+/* ----------------- Extra Functionality---------------------------*/
+
+.show{
+    background-color: rgb(30,30,30);
+    color: white;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color:rgb(30,30,30);
+    cursor:pointer;
+}
+#cd1{
+    
+    grid-template-columns: repeat(7, 1fr);
+    height: 15em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+#cd2{
+    
+    grid-template-columns: repeat(7, 1fr);
+    height: 15em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+#cd3{
+    
+    grid-template-columns: repeat(7, 1fr);
+    height: 15em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
 }
 
 @media (max-width:800px){
