@@ -337,6 +337,7 @@ html{
     transition: all ease 0.3s;
 }
 .card:hover{
+        background-color: rgb(77, 81, 83);
    .card_img span{
     opacity: 1;
     transform: translateY(-15%);
