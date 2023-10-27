@@ -227,11 +227,19 @@ html{
         color: rgb(32, 198, 90);
         font-size: 3em;
 }
+
     .fa-circle-play:hover{
         transform: scale(1.05);
         color: rgb(30, 215, 96);
     }
 
+}
+
+@media (max-width: 1000px) {
+    .recent-playlist{
+        grid-template-columns: repeat(2,minmax(300px,2fr));
+        grid-template-rows: repeat(3,minmax(48px,64px));
+    }
 }
 
 /* -----playlist cards----- */
@@ -271,7 +279,7 @@ html{
 
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(7, minmax(150px,200px));
+    grid-template-columns: repeat(7, 1fr);
     height: 15em;
     width: 100%;
     align-items: center;
@@ -334,6 +342,42 @@ html{
     color: rgb(170,170,170);
 }
 
+@media (max-width: 1500px) {
+    .cardnone1{
+        display: none;
+    }
+    .cardContainer{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1290px) {
+    .cardContainer{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .cardnone2{
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .cardContainer{
+        grid-template-columns: repeat(5, minmax(180px,210px));
+    }
+    .cardnone3{
+        display: none;
+    }
+    .cardnone2{
+        display: none;
+    }
+    .cardnone1{
+        display: none;
+    }
+}
+
+
+
+
 /*--------this is footer section-----------*/
 
 
@@ -347,6 +391,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(1,1fr);
+    z-index: 1;
 }
 
 #footerSong{
