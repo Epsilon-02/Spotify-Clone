@@ -2,7 +2,7 @@
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'font', sans-serif;
     color: #fff;
 }
 
@@ -19,9 +19,9 @@ html{
     background: transparent;
 }
 
-::-webkit-scrollbar-thumb{
+ /*::-webkit-scrollbar-thumb{
     background: #1FDF64;
-}
+} */
 
 /* --------this is main body--------------- */
 
@@ -164,6 +164,7 @@ html{
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
+    height: auto;
 }
 
 #hrList{
@@ -173,9 +174,9 @@ html{
 
 /* recent playlist */
 
-.recent{
+.recent-playlist{
     width: 100%;
-    height: 11rem;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
