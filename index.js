@@ -143,11 +143,11 @@ function musicplay(text_img){
     songname.innerHTML = elem.querySelector('.card_title').innerHTML;
 }
 function play(){
-    let flag=document.querySelector('play');
-    if(flag.innerHTML=="Play"){
-        flag.innerHTML="Pause";
+    const play=document.querySelector('.play');
+    if(play.innerHTML=="Play"){
+        document.querySelector('.play').innerHTML="Pause";
     }
     else{
-        flag.innerHTML="Play";
+        document.querySelector('.play').innerHTML="Play";
     }
 }
