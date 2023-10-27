@@ -16,7 +16,7 @@ html{
 
 ::-webkit-scrollbar{
     width:0px;
-    background:transparent;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -27,19 +27,19 @@ html{
 
 .container{
     padding: 0.5rem;
-    background-color: rgb(30,30,30);
+    background-color: rgb(18,18,18);
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
     row-gap: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 }
 
-/* Banner */
+/* Banner 
 .banner{
     border: 2px solid black;
     width: 85vw;
-    /* height: 22rem; */
+    /* height: 22rem; 
     height: 29vw;
     border-radius: 0.5rem;
     display: grid;
@@ -157,12 +157,17 @@ html{
 #box_6 i:hover{
     color: #fff;
     transform: scale(1.1);
-}
+}*/
 
 /* Greeting */
+.greeting{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
 
 #hrList{
-    font-size: 1.7rem ;
+    font-size: 1.4rem ;
     font-weight: 900;
 }
 
@@ -186,6 +191,7 @@ html{
     column-gap: 1em;
     align-items: center;
     font-weight: 600;
+    opacity: 0.9;
 }
 
 .rbox span{
@@ -214,8 +220,8 @@ html{
 }
 
 .rbox:hover{
-    background-color: rgb(77, 81, 83);
-    transition: all 0.2s;
+    background-color: rgb(81, 81, 81);
+    transition: all 0.3s;
     .fa-circle-play{
         color: rgb(32, 198, 90);
         font-size: 3em;
@@ -227,71 +233,33 @@ html{
 
 }
 
-@media (max-width: 700px ){
-    .banner{
-        display: none;
-    }
-    .recent{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-    }
-
-    #play-button{
-        order: 1;
-    }
-    .fa-circle-play{
-            color: rgb(45,45,45);
-            font-size: 2.5em;
-    }
-    
-    .rbox:hover{
-        background-color: rgb(77, 81, 83);
-        transition: all 0.2s;
-        .fa-circle-play{
-            color: rgb(32, 198, 90);
-            font-size: 2.5em;
-        }
-        .fa-circle-play:hover{
-            transform: scale(1.05);
-            color: rgb(30, 215, 96);
-        }
-    
-    }
-
-    @media  (max-width: 40px) {
-        .recent{
-            grid-template-columns: repeat(1,1fr);
-            grid-template-rows: repeat(6,1fr);
-        }
-    }
-
-}
-
-
 /* -----playlist cards----- */
 
 .cards{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 7rem;
+    justify-content: space-evenly;
+    height: auto;
     color: #fff;
-    height: 20rem;
+    height: auto;
     row-gap: 1rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 4rem;
 }
-
 
 .card_header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+    :hover{
+        text-decoration: underline;
+    }
+    
 }
 
 .card_header h3{
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .card_header h6{
@@ -300,25 +268,24 @@ html{
     font-weight: 700;
 }
 
-
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, minmax(150px,200px));
     height: 15em;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .card{
-    background-color: rgb(45,45,45);
+    background-color: rgb(27,27,27);
     height: 90%;
-    width: 80%;
+    width: 90%;
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    row-gap: 0.7em;
+    justify-content: flex-start;
+    row-gap: 0.5em;
     padding: 0.7em;
 }
 
@@ -329,15 +296,17 @@ html{
 .card_img span{
     position: relative;
     z-index: 1;
-    top: -30%;
-    left: 65%;
+    top: -28%;
+    left: 70%;
     width: 20%;
     height: 20%;
     opacity: 0;
-    transition: all ease 0.3s;
+    transition: all ease 0.4s;
+    border-radius: 50%;
+    box-shadow: 0px 10px 15px 4px black;
 }
 .card:hover{
-        background-color: rgb(77, 81, 83);
+        background-color: rgb(40,40,40);
    .card_img span{
     opacity: 1;
     transform: translateY(-15%);

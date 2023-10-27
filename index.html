@@ -1,77 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
-    
+
     <!---There are two major sections 1) 3 grids 2) footer-->
-     
-         <!--This grid contains home and search-->
-         <div class="grid">
-             <div id="home">"HOME ICON" <span>Home</span></div>
-             <div id="search">"SEARCH ICON" <span>Search</span></div>
-         </div>
 
-         <!--This grid is your library section-->
-         <div class="grid">
 
-             <div id="library">"ICON" <span>Your Library</span> <span>+</span></div>
-             
-             <div id="categories">
-                <span>Playlist</span>
-                <span>Podcasts & Shows</span>
-                <span>Artists</span>
-             </div>
+    <!--This grid is the main content-->
 
-             <div id="list">
-                <!--On scrolling, tools scroll along thus it is part of list section-->
-                <div id="tools">
-                  <span>"SEARCH ICON"</span>
-                  <span>Recents "RECENTS ICON"</span>
-                </div>
+    <header>
 
-                <!--This contains the playlists-->
-                <div id="listContainer">
-                   <!--Adding just one for now-->>
-                   <div class="listItem">
-                        <img src="" alt="">
-                        <h1></h1>
-                        <div><span>"TYPE"</span> <span>"AUTHOR"</span></div>
-                   </div>
-                </div>
-             </div>
-         </div>
-    
-         <!--This grid is the main content-->
-         <div class="grid">
-            
-            <header>
+        <span>
+            <div class="hIcons"></div>
+            <div class="hIcons"></div>
+        </span>
 
-                <span>
-                    <div class="hIcons"></div>
-                    <div class="hIcons"></div>
-                </span>
+        <span>
+            <div class="hIcons"></div>
+            <div class="hIcons"></div>
+            <div class="hIcons"></div>
+        </span>
 
-                <span>
-                    <div class="hIcons"></div>
-                    <div class="hIcons"></div>
-                    <div class="hIcons"></div>
-                </span>
+    </header>
 
-            </header>
+    <div class="container">
 
-            <section class="container"> 
-                <div class="banner">
+        <!-- <div class="banner">
                     <div class="banner_box" id="box_1">Playlist</div>
                     <div class="banner_box" id="box_2"><span>Sponsored</span></div>
                     <div class="banner_box" id="box_3"></div>
@@ -82,328 +52,432 @@
                         <button class="unfollow" onclick="follow()" id="unfollow">Unfollow</button>
                         <i class='bx bx-dots-horizontal-rounded'></i>
                     </div>
-                </div>
-    
-                <div id="hrList">
-                   <h2> Good evening</h2>
-                </div>
-    
-                <div class="recent">
-                    <div class="rbox" id="rbox_1"><span><img src="Spotify assets/liked-song.jpg" alt=""></span>Liked Songs
-                    <span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                    <div class="rbox" id="rbox_2"><span><img src="Spotify assets/playlist1.jfif" alt=""></span><span id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 1</div>
-                    <div class="rbox" id="rbox_3"><span><img src="Spotify assets/playlist2.jfif" alt=""></span><span id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 2</div>
-                    <div class="rbox" id="rbox_4"><span><img src="Spotify assets/playlist3.jfif" alt=""></span><span id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 3</div>
-                    <div class="rbox" id="rbox_5"><span><img src="Spotify assets/playlist-cover.png" alt=""></span><span id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 4</div>
-                    <div class="rbox" id="rbox_6"><span><img src="Spotify assets/pop-mix.jfif" alt=""></span><span id="play-button"><i class="fa-solid fa-circle-play"></i></span>Pop Mix</div>
-                </div>
-                <!--We can keep adding cards section as required-->
-                <div class="cards">
-                    <div class="card_header">
-                        <h3>Jump back in</h3>
-                        <h6><button onclick="show('cd1','show1')" class="show" id="show1"><b>Show all</b></button></h6>
-                    </div>
-                    <div class="cardContainer">
-                        <div class="card" id="cardid_1" onmouseover="Hover('cardid_1',false)" onmouseleave="Hover('cardid_1',true)" onclick="musicplay('cardid_1')">
-                            <div class="card_img">
-                                <img src="Spotify assets/eternal.jpg" alt="">
-                                <span id="play-button"><i class="fa-solid fa-circle-play"></i></span>
-                            </div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_2" onmouseover="Hover('cardid_2',false)" onmouseleave="Hover('cardid_2',true)" onclick="musicplay('cardid_2')">
-                            <div class="card_img"><img src="Spotify assets/soft 10s.jfif" alt="">
-                                <span id="play-button"><i class="fa-solid fa-circle-play"></i></span>
+                </div> -->
+       
+        <section class="greeting">
+            <div id="hrList">
+                <h2> Good evening</h2>
+            </div>
 
-                            </div>
-                
-                            <div class="card_title">Soft 10s</div>
-                            <div class="card_subtitle">2010s Melodies</div>
-                        </div>
-                        <div class="card" id="cardid_3" onmouseover="Hover('cardid_3',false)" onmouseleave="Hover('cardid_3',true)" onclick="musicplay('cardid_3')">
-                            <div class="card_img"><img src="Spotify assets/happy-beats.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Happy Beats</div>
-                            <div class="card_subtitle">Feel-good music!</div>
-                        </div>
-                        <div class="card" id="cardid_4"onmouseover="Hover('cardid_4',false)" onmouseleave="Hover('cardid_4',true)" onclick="musicplay('cardid_4')">
-                            <div class="card_img"><img src="Spotify assets/faded.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Faded</div>
-                            <div class="card_subtitle">Alan Walker</div>
-                        </div>
-                        <div class="card" id="cardid_5"onmouseover="Hover('cardid_5',false)" onmouseleave="Hover('cardid_5',true)" onclick="musicplay('cardid_5')">
-                            <div class="card_img"><img src="Spotify assets/this-is-arijit.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">This is Arijit Singh</div>
-                            <div class="card_subtitle">Essential tracks</div>
-                        </div>
-                        <div class="card" id="cardid_6" onmouseover="Hover('cardid_6',false)" onmouseleave="Hover('cardid_6',true)" onclick="musicplay('cardid_6')">
-                            <div class="card_img"><img src="Spotify assets/the-nights.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">The Nights</div>
-                            <div class="card_subtitle">Avicii</div>
-                        </div>
-                        <div class="card" id="cardid_7" onmouseover="Hover('cardid_7',false)" onmouseleave="Hover('cardid_7',true)" onclick="musicplay('cardid_7')">
-                            <div class="card_img"><img src="Spotify assets/podcast.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">TED Tech</div>
-                            <div class="card_subtitle">TED Tech Podcast</div>
-                        </div>
-                    </div>
+            <div class="recent">
+                <div class="rbox" id="rbox_1"><span><img src="Spotify assets/liked-song.jpg" alt=""></span>Liked Songs
+                    <span id="play-button"><i class="fa-solid fa-circle-play"></i></span>
                 </div>
+                <div class="rbox" id="rbox_2"><span><img src="Spotify assets/playlist1.jfif" alt=""></span><span
+                        id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 1</div>
+                <div class="rbox" id="rbox_3"><span><img src="Spotify assets/playlist2.jfif" alt=""></span><span
+                        id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 2</div>
+                <div class="rbox" id="rbox_4"><span><img src="Spotify assets/playlist3.jfif" alt=""></span><span
+                        id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 3</div>
+                <div class="rbox" id="rbox_5"><span><img src="Spotify assets/playlist-cover.png" alt=""></span><span
+                        id="play-button"><i class="fa-solid fa-circle-play"></i></span>Playlist 4</div>
+                <div class="rbox" id="rbox_6"><span><img src="Spotify assets/pop-mix.jfif" alt=""></span><span
+                        id="play-button"><i class="fa-solid fa-circle-play"></i></span>Pop Mix</div>
+            </div>
+        </section>
 
-                <div class="cardContainer" id="cd1">
-                        <div class="card" id="cardid_8" onmouseover="Hover('cardid_8',false)" onmouseleave="Hover('cardid_8',true)" onclick="musicplay('cardid_8')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_9" onmouseover="Hover('cardid_9',false)" onmouseleave="Hover('cardid_9',true)" onclick="musicplay('cardid_9')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_10" onmouseover="Hover('cardid_10',false)" onmouseleave="Hover('cardid_10',true)" onclick="musicplay('cardid_10')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_11"onmouseover="Hover('cardid_11',false)" onmouseleave="Hover('cardid_11',true)" onclick="musicplay('cardid_11')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_12"onmouseover="Hover('cardid_12',false)" onmouseleave="Hover('cardid_12',true)" onclick="musicplay('cardid_12')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_13" onmouseover="Hover('cardid_13',false)" onmouseleave="Hover('cardid_13',true)" onclick="musicplay('cardid_13')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_14" onmouseover="Hover('cardid_14',false)" onmouseleave="Hover('cardid_14',true)" onclick="musicplay('cardid_14')">
-                            <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                    </div>
-                
+        <!--We can keep adding cards section as required-->
 
-    
-                <div class="cards">
-                    <div class="card_header">
-                        <h3>Top hits</h3>
-                        <h6><button onclick="show('cd2','show2')" class="show" id="show2"><b>Show all</b></button></h6>
+        <section class="cards">
+            <div class="card_header">
+                <h3>Jump back in</h3>
+                <h6><button onclick="show('cd1','show1')" class="show" id="show1"><b>Show all</b></button></h6>
+            </div>
+            <div class="cardContainer">
+                <div class="card" id="cardid_1" onmouseover="Hover('cardid_1',false)"
+                    onmouseleave="Hover('cardid_1',true)" onclick="musicplay('cardid_1')">
+                    <div class="card_img">
+                        <img src="Spotify assets/eternal.jpg" alt="">
+                        <span id="play-button"><i class="fa-solid fa-circle-play"></i></span>
                     </div>
-                    <div class="cardContainer">
-                        <div class="card" id="cardid_15" onmouseover="Hover('cardid_15',false)" onmouseleave="Hover('cardid_15',true)"onclick="musicplay('cardid_15')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_16" onmouseover="Hover('cardid_16',false)" onmouseleave="Hover('cardid_16',true)"onclick="musicplay('cardid_16')">
-                            <div class="card_img"><img src="Spotify assets/top-global.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Global hits!</div>
-                            <div class="card_subtitle">Most played tracks</div>
-                        </div>
-                        <div class="card" id="cardid_17" onmouseover="Hover('cardid_17',false)" onmouseleave="Hover('cardid_17',true)"onclick="musicplay('cardid_17')">
-                            <div class="card_img"><img src="Spotify assets/bollywood-hits.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Bollywood hits!</div>
-                            <div class="card_subtitle">Arijit Singh, Arko</div>
-                        </div>
-                        <div class="card" id="cardid_18" onmouseover="Hover('cardid_18',false)" onmouseleave="Hover('cardid_18',true)"onclick="musicplay('cardid_18')">
-                            <div class="card_img"><img src="Spotify assets/tth.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Today's Top Hits!</div>
-                            <div class="card_subtitle">Selena Gomez</div>
-                        </div>
-                        <div class="card" id="cardid_19" onmouseover="Hover('cardid_19',false)" onmouseleave="Hover('cardid_19',true)"onclick="musicplay('cardid_19')">
-                            <div class="card_img"><img src="Spotify assets/tamil-hits.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Tamil hits!</div>
-                            <div class="card_subtitle">By Spotify</div>
-                        </div>
-                        <div class="card" id="cardid_20" onmouseover="Hover('cardid_20',false)" onmouseleave="Hover('cardid_20',true)"onclick="musicplay('cardid_20')">
-                            <div class="card_img"><img src="Spotify assets/punjabi.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Punjabi Hot Hits!</div>
-                            <div class="card_subtitle">By Spotify</div>
-                        </div>
-                        <div class="card" id="cardid_21" onmouseover="Hover('cardid_21',false)" onmouseleave="Hover('cardid_21',true)"onclick="musicplay('cardid_21')">
-                            <div class="card_img"><img src="Spotify assets/justin.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">This is Bieber!</div>
-                            <div class="card_subtitle">Justin Bieber</div>
-                        </div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_2" onmouseover="Hover('cardid_2',false)"
+                    onmouseleave="Hover('cardid_2',true)" onclick="musicplay('cardid_2')">
+                    <div class="card_img"><img src="Spotify assets/soft 10s.jfif" alt="">
+                        <span id="play-button"><i class="fa-solid fa-circle-play"></i></span>
+
                     </div>
 
+                    <div class="card_title">Soft 10s</div>
+                    <div class="card_subtitle">2010s Melodies</div>
                 </div>
-                <div class="cardContainer" id="cd2">
-                        <div class="card" id="cardid_22" onmouseover="Hover('cardid_22',false)" onmouseleave="Hover('cardid_22',true)"onclick="musicplay('cardid_22')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_23" onmouseover="Hover('cardid_23',false)" onmouseleave="Hover('cardid_23',true)"onclick="musicplay('cardid_23')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_24" onmouseover="Hover('cardid_24',false)" onmouseleave="Hover('cardid_24',true)"onclick="musicplay('cardid_24')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_25" onmouseover="Hover('cardid_25',false)" onmouseleave="Hover('cardid_25',true)"onclick="musicplay('cardid_25')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_26" onmouseover="Hover('cardid_26',false)" onmouseleave="Hover('cardid_26',true)"onclick="musicplay('cardid_26')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_27" onmouseover="Hover('cardid_27',false)" onmouseleave="Hover('cardid_27',true)"onclick="musicplay('cardid_27')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                        <div class="card" id="cardid_28" onmouseover="Hover('cardid_28',false)" onmouseleave="Hover('cardid_28',true)"onclick="musicplay('cardid_28')">
-                            <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Top hits!</div>
-                            <div class="card_subtitle">Singer</div>
-                        </div>
-                    </div>
-    
-                <div class="cards">
-                    <div class="card_header">
-                        <h3>Daily mix</h3>
-                        <h6><button onclick="show('cd3','show3')" class="show" id="show3"><b>Show all</b></button></h6>
-                    </div>
-                    <div class="cardContainer">
-                        <div class="card" id="cardid_29"onmouseover="Hover('cardid_29',false)" onmouseleave="Hover('cardid_29',true)" onclick="musicplay('cardid_29')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 1</div>
-                            <div class="card_subtitle">Billie Elish</div>
-                        </div>
-                        <div class="card" id="cardid_30" onmouseover="Hover('cardid_30',false)" onmouseleave="Hover('cardid_30',true)"onclick="musicplay('cardid_30')">
-                            <div class="card_img"><img src="Spotify assets/mix1.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 1</div>
-                            <div class="card_subtitle">Taylor Swift, Zedd</div>
-                        </div>
-                        <div class="card" id="cardid_31" onmouseover="Hover('cardid_31',false)" onmouseleave="Hover('cardid_31',true)"onclick="musicplay('cardid_31')">
-                            <div class="card_img"><img src="Spotify assets/mix2.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 2</div>
-                            <div class="card_subtitle">Bad Bunny, Mora</div>
-                        </div>
-                        <div class="card" id="cardid_32"onmouseover="Hover('cardid_32',false)" onmouseleave="Hover('cardid_32',true)"onclick="musicplay('cardid_32')">
-                            <div class="card_img"><img src="Spotify assets/default.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 3</div>
-                            <div class="card_subtitle">Eminem </div>
-                        </div>
-                        <div class="card" id="cardid_33" onmouseover="Hover('cardid_33',false)" onmouseleave="Hover('cardid_33',true)"onclick="musicplay('cardid_33')">
-                            <div class="card_img"><img src="Spotify assets/mix4.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 4</div>
-                            <div class="card_subtitle">Pritam and more</div>
-                        </div>
-                        <div class="card" id="cardid_34" onmouseover="Hover('cardid_34',false)" onmouseleave="Hover('cardid_34',true)"onclick="musicplay('cardid_34')">
-                            <div class="card_img"><img src="Spotify assets/mix5.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 5</div>
-                            <div class="card_subtitle">One Direction</div>
-                        </div>
-                        <div class="card" id="cardid_35" onmouseover="Hover('cardid_35',false)" onmouseleave="Hover('cardid_35',true)"onclick="musicplay('cardid_35')">
-                            <div class="card_img"><img src="Spotify assets/mix6.jfif" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Daily Mix 6</div>
-                            <div class="card_subtitle">Avicii and more</div>
-                        </div>
-                    </div>
+                <div class="card" id="cardid_3" onmouseover="Hover('cardid_3',false)"
+                    onmouseleave="Hover('cardid_3',true)" onclick="musicplay('cardid_3')">
+                    <div class="card_img"><img src="Spotify assets/happy-beats.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Happy Beats</div>
+                    <div class="card_subtitle">Feel-good music!</div>
+                </div>
+                <div class="card" id="cardid_4" onmouseover="Hover('cardid_4',false)"
+                    onmouseleave="Hover('cardid_4',true)" onclick="musicplay('cardid_4')">
+                    <div class="card_img"><img src="Spotify assets/faded.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Faded</div>
+                    <div class="card_subtitle">Alan Walker</div>
+                </div>
+                <div class="card" id="cardid_5" onmouseover="Hover('cardid_5',false)"
+                    onmouseleave="Hover('cardid_5',true)" onclick="musicplay('cardid_5')">
+                    <div class="card_img"><img src="Spotify assets/this-is-arijit.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">This is Arijit Singh</div>
+                    <div class="card_subtitle">Essential tracks</div>
+                </div>
+                <div class="card" id="cardid_6" onmouseover="Hover('cardid_6',false)"
+                    onmouseleave="Hover('cardid_6',true)" onclick="musicplay('cardid_6')">
+                    <div class="card_img"><img src="Spotify assets/the-nights.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">The Nights</div>
+                    <div class="card_subtitle">Avicii</div>
+                </div>
+                <div class="card" id="cardid_7" onmouseover="Hover('cardid_7',false)"
+                    onmouseleave="Hover('cardid_7',true)" onclick="musicplay('cardid_7')">
+                    <div class="card_img"><img src="Spotify assets/podcast.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">TED Tech</div>
+                    <div class="card_subtitle">TED Tech Podcast</div>
+                </div>
+            </div>
+            <div class="cardContainer" id="cd1">
+                <div class="card" id="cardid_8" onmouseover="Hover('cardid_8',false)"
+                    onmouseleave="Hover('cardid_8',true)" onclick="musicplay('cardid_8')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_9" onmouseover="Hover('cardid_9',false)"
+                    onmouseleave="Hover('cardid_9',true)" onclick="musicplay('cardid_9')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_10" onmouseover="Hover('cardid_10',false)"
+                    onmouseleave="Hover('cardid_10',true)" onclick="musicplay('cardid_10')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_11" onmouseover="Hover('cardid_11',false)"
+                    onmouseleave="Hover('cardid_11',true)" onclick="musicplay('cardid_11')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_12" onmouseover="Hover('cardid_12',false)"
+                    onmouseleave="Hover('cardid_12',true)" onclick="musicplay('cardid_12')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_13" onmouseover="Hover('cardid_13',false)"
+                    onmouseleave="Hover('cardid_13',true)" onclick="musicplay('cardid_13')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_14" onmouseover="Hover('cardid_14',false)"
+                    onmouseleave="Hover('cardid_14',true)" onclick="musicplay('cardid_14')">
+                    <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+            </div>
+        </section>
 
+        <section class="cards">
+            <div class="card_header">
+                <h3>Top hits</h3>
+                <h6><button onclick="show('cd2','show2')" class="show" id="show2"><b>Show all</b></button></h6>
+            </div>
+            <div class="cardContainer">
+                <div class="card" id="cardid_15" onmouseover="Hover('cardid_15',false)"
+                    onmouseleave="Hover('cardid_15',true)" onclick="musicplay('cardid_15')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
                 </div>
-                <div class="cardContainer" id="cd3">
-                        <div class="card" id="cardid_36"onmouseover="Hover('cardid_36',false)" onmouseleave="Hover('cardid_36',true)"onclick="musicplay('cardid_36')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_37" onmouseover="Hover('cardid_37',false)" onmouseleave="Hover('cardid_37',true)"onclick="musicplay('cardid_37')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_38" onmouseover="Hover('cardid_38',false)" onmouseleave="Hover('cardid_38',true)"onclick="musicplay('cardid_38')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_39"onmouseover="Hover('cardid_39',false)" onmouseleave="Hover('cardid_39',true)"onclick="musicplay('cardid_39')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_40" onmouseover="Hover('cardid_40',false)" onmouseleave="Hover('cardid_40',true)"onclick="musicplay('cardid_40')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_41" onmouseover="Hover('cardid_41',false)" onmouseleave="Hover('cardid_41',true)"onclick="musicplay('cardid_41')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
-                        <div class="card" id="cardid_42" onmouseover="Hover('cardid_42',false)" onmouseleave="Hover('cardid_42',true)"onclick="musicplay('cardid_42')">
-                            <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i class="fa-solid fa-circle-play"></i></span></div>
-                            <div class="card_title">Eternal Bliss</div>
-                            <div class="card_subtitle">Just let it go!</div>
-                        </div>
+                <div class="card" id="cardid_16" onmouseover="Hover('cardid_16',false)"
+                    onmouseleave="Hover('cardid_16',true)" onclick="musicplay('cardid_16')">
+                    <div class="card_img"><img src="Spotify assets/top-global.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Global hits!</div>
+                    <div class="card_subtitle">Most played tracks</div>
                 </div>
-                <br>
-            </section>
-     <footer>
-        
+                <div class="card" id="cardid_17" onmouseover="Hover('cardid_17',false)"
+                    onmouseleave="Hover('cardid_17',true)" onclick="musicplay('cardid_17')">
+                    <div class="card_img"><img src="Spotify assets/bollywood-hits.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Bollywood hits!</div>
+                    <div class="card_subtitle">Arijit Singh, Arko</div>
+                </div>
+                <div class="card" id="cardid_18" onmouseover="Hover('cardid_18',false)"
+                    onmouseleave="Hover('cardid_18',true)" onclick="musicplay('cardid_18')">
+                    <div class="card_img"><img src="Spotify assets/tth.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Today's Top Hits!</div>
+                    <div class="card_subtitle">Selena Gomez</div>
+                </div>
+                <div class="card" id="cardid_19" onmouseover="Hover('cardid_19',false)"
+                    onmouseleave="Hover('cardid_19',true)" onclick="musicplay('cardid_19')">
+                    <div class="card_img"><img src="Spotify assets/tamil-hits.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Tamil hits!</div>
+                    <div class="card_subtitle">By Spotify</div>
+                </div>
+                <div class="card" id="cardid_20" onmouseover="Hover('cardid_20',false)"
+                    onmouseleave="Hover('cardid_20',true)" onclick="musicplay('cardid_20')">
+                    <div class="card_img"><img src="Spotify assets/punjabi.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Punjabi Hot Hits!</div>
+                    <div class="card_subtitle">By Spotify</div>
+                </div>
+                <div class="card" id="cardid_21" onmouseover="Hover('cardid_21',false)"
+                    onmouseleave="Hover('cardid_21',true)" onclick="musicplay('cardid_21')">
+                    <div class="card_img"><img src="Spotify assets/justin.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">This is Bieber!</div>
+                    <div class="card_subtitle">Justin Bieber</div>
+                </div>
+            </div>
+            <div class="cardContainer" id="cd2">
+                <div class="card" id="cardid_22" onmouseover="Hover('cardid_22',false)"
+                    onmouseleave="Hover('cardid_22',true)" onclick="musicplay('cardid_22')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+                <div class="card" id="cardid_23" onmouseover="Hover('cardid_23',false)"
+                    onmouseleave="Hover('cardid_23',true)" onclick="musicplay('cardid_23')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+                <div class="card" id="cardid_24" onmouseover="Hover('cardid_24',false)"
+                    onmouseleave="Hover('cardid_24',true)" onclick="musicplay('cardid_24')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+                <div class="card" id="cardid_25" onmouseover="Hover('cardid_25',false)"
+                    onmouseleave="Hover('cardid_25',true)" onclick="musicplay('cardid_25')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+                <div class="card" id="cardid_26" onmouseover="Hover('cardid_26',false)"
+                    onmouseleave="Hover('cardid_26',true)" onclick="musicplay('cardid_26')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+                <div class="card" id="cardid_27" onmouseover="Hover('cardid_27',false)"
+                    onmouseleave="Hover('cardid_27',true)" onclick="musicplay('cardid_27')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+                <div class="card" id="cardid_28" onmouseover="Hover('cardid_28',false)"
+                    onmouseleave="Hover('cardid_28',true)" onclick="musicplay('cardid_28')">
+                    <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Top hits!</div>
+                    <div class="card_subtitle">Singer</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="card_header">
+                <h3>Daily mix</h3>
+                <h6><button onclick="show('cd3','show3')" class="show" id="show3"><b>Show all</b></button></h6>
+            </div>
+            <div class="cardContainer">
+                <div class="card" id="cardid_29" onmouseover="Hover('cardid_29',false)"
+                    onmouseleave="Hover('cardid_29',true)" onclick="musicplay('cardid_29')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 1</div>
+                    <div class="card_subtitle">Billie Elish</div>
+                </div>
+                <div class="card" id="cardid_30" onmouseover="Hover('cardid_30',false)"
+                    onmouseleave="Hover('cardid_30',true)" onclick="musicplay('cardid_30')">
+                    <div class="card_img"><img src="Spotify assets/mix1.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 1</div>
+                    <div class="card_subtitle">Taylor Swift, Zedd</div>
+                </div>
+                <div class="card" id="cardid_31" onmouseover="Hover('cardid_31',false)"
+                    onmouseleave="Hover('cardid_31',true)" onclick="musicplay('cardid_31')">
+                    <div class="card_img"><img src="Spotify assets/mix2.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 2</div>
+                    <div class="card_subtitle">Bad Bunny, Mora</div>
+                </div>
+                <div class="card" id="cardid_32" onmouseover="Hover('cardid_32',false)"
+                    onmouseleave="Hover('cardid_32',true)" onclick="musicplay('cardid_32')">
+                    <div class="card_img"><img src="Spotify assets/default.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 3</div>
+                    <div class="card_subtitle">Eminem </div>
+                </div>
+                <div class="card" id="cardid_33" onmouseover="Hover('cardid_33',false)"
+                    onmouseleave="Hover('cardid_33',true)" onclick="musicplay('cardid_33')">
+                    <div class="card_img"><img src="Spotify assets/mix4.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 4</div>
+                    <div class="card_subtitle">Pritam and more</div>
+                </div>
+                <div class="card" id="cardid_34" onmouseover="Hover('cardid_34',false)"
+                    onmouseleave="Hover('cardid_34',true)" onclick="musicplay('cardid_34')">
+                    <div class="card_img"><img src="Spotify assets/mix5.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 5</div>
+                    <div class="card_subtitle">One Direction</div>
+                </div>
+                <div class="card" id="cardid_35" onmouseover="Hover('cardid_35',false)"
+                    onmouseleave="Hover('cardid_35',true)" onclick="musicplay('cardid_35')">
+                    <div class="card_img"><img src="Spotify assets/mix6.jfif" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Daily Mix 6</div>
+                    <div class="card_subtitle">Avicii and more</div>
+                </div>
+            </div>
+            <div class="cardContainer" id="cd3">
+                <div class="card" id="cardid_36" onmouseover="Hover('cardid_36',false)"
+                    onmouseleave="Hover('cardid_36',true)" onclick="musicplay('cardid_36')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_37" onmouseover="Hover('cardid_37',false)"
+                    onmouseleave="Hover('cardid_37',true)" onclick="musicplay('cardid_37')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_38" onmouseover="Hover('cardid_38',false)"
+                    onmouseleave="Hover('cardid_38',true)" onclick="musicplay('cardid_38')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_39" onmouseover="Hover('cardid_39',false)"
+                    onmouseleave="Hover('cardid_39',true)" onclick="musicplay('cardid_39')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_40" onmouseover="Hover('cardid_40',false)"
+                    onmouseleave="Hover('cardid_40',true)" onclick="musicplay('cardid_40')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_41" onmouseover="Hover('cardid_41',false)"
+                    onmouseleave="Hover('cardid_41',true)" onclick="musicplay('cardid_41')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+                <div class="card" id="cardid_42" onmouseover="Hover('cardid_42',false)"
+                    onmouseleave="Hover('cardid_42',true)" onclick="musicplay('cardid_42')">
+                    <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
+                                class="fa-solid fa-circle-play"></i></span></div>
+                    <div class="card_title">Eternal Bliss</div>
+                    <div class="card_subtitle">Just let it go!</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spotify_footer">
+
+        </section>
+    </div>
+    <br>
+
+    <footer>
+
         <div id="footerSong">
-             <span style="position: relative; text-align: center;">
+            <span style="position: relative; text-align: center;">
                 <img src="media/Demo.jpg" alt="Song poster">
                 <div class="chevron">
-                <i class="fa-solid fa-chevron-up chevron"></i>
-                <i class="fa-solid fa-chevron-down chevron"></i>
+                    <i class="fa-solid fa-chevron-up chevron"></i>
+                    <i class="fa-solid fa-chevron-down chevron"></i>
                 </div>
             </span>
-             <span>
+            <span>
                 <h2>Song Name</h2>
                 <p>Arijit Singh</p>
-             </span>
-             <span><i class="fa-regular fa-heart line-heart"></i></span>
-             <span><i class="fa-solid fa-heart solid-heart"></i></span>
+            </span>
+            <span><i class="fa-regular fa-heart line-heart"></i></span>
+            <span><i class="fa-solid fa-heart solid-heart"></i></span>
         </div>
 
         <div id="footerPlayer">
-             <div id="fp1">
+            <div id="fp1">
                 <i class="fa-solid fa-shuffle fpr msg">
-                <p class="message" style="left:-40px">Enable Shuffle</p></i>
+                    <p class="message" style="left:-40px">Enable Shuffle</p>
+                </i>
                 <i class="fa-solid fa-backward-step fpr"></i>
                 <i class="fa-solid fa-play"></i>
                 <i class="fa-solid fa-pause"></i>
                 <i class="fa-solid fa-forward-step fpr"></i>
                 <i class="fa-solid fa-repeat fpr"></i>
-             </div>
+            </div>
 
-             <div id="fp2">
+            <div id="fp2">
                 <p>0:00</p>
                 <hr>
                 <p>2:35</p>
-             </div>
+            </div>
         </div>
 
         <div id="footerTools">
-           <div>
-            <i class="fa-solid fa-up-right-from-square msg"><p class="message" style="margin-left:-40px">Now Playing</p></i>
-            <i class="fa-solid fa-microphone-lines msg"><p class="message" style="margin-left:-18px">Lyrics</p></i>
-            <i class="fa-solid fa-bars msg"><p class="message" style="margin-left:-22px">Queue</p></i>
-            <i class="fa-solid fa-computer msg"><p class="message" style="margin-left:-55px">Connect to device</p></i>
-            <i class="fa-solid fa-volume-high msg"><p class="message" style="margin-left:-15px">Mute</p></i>
-            <i class="fa-solid fa-volume-xmark" style="display: none;"></i>
-            <hr>
-          </div>
+            <div>
+                <i class="fa-solid fa-up-right-from-square msg">
+                    <p class="message" style="margin-left:-40px">Now Playing</p>
+                </i>
+                <i class="fa-solid fa-microphone-lines msg">
+                    <p class="message" style="margin-left:-18px">Lyrics</p>
+                </i>
+                <i class="fa-solid fa-bars msg">
+                    <p class="message" style="margin-left:-22px">Queue</p>
+                </i>
+                <i class="fa-solid fa-computer msg">
+                    <p class="message" style="margin-left:-55px">Connect to device</p>
+                </i>
+                <i class="fa-solid fa-volume-high msg">
+                    <p class="message" style="margin-left:-15px">Mute</p>
+                </i>
+                <i class="fa-solid fa-volume-xmark" style="display: none;"></i>
+                <hr>
+            </div>
         </div>
-        
-     </footer>
 
-     <script type="text/javascript" src = "index.js"></script>
+    </footer>
+
+    <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
