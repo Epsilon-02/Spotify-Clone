@@ -141,3 +141,16 @@ function play(){
         document.querySelector('.play').innerHTML="Play";
     }
 }
+const date= new Date();
+let hours=date.getHours();
+const greet1=document.querySelectorAll(h2);
+if(hours<12 && hours>4){
+    greet1[0].innerHTML="Good Morning";
+}
+else if(hours>12 && hours<17){
+        greet1[0].innerHTML="Good Afternoon";
+}
+else{
+    greet1[0].innerHTML="Good Evening";
+}
+alert(greet1[0].innerHTML);
