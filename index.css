@@ -669,15 +669,152 @@ footer{
 }
 @font-face {
 	font-family: "font";
-	src: url("font1.otf");
+	src: url("Spotify assets/font1.otf");
 }
 body {
 	background-color: black;
 	height: 90vh;
+	
+}
+
+.hIcons{
+	position: relative;
+}
+
+header{
+	display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    column-gap: 40%;
+    align-items: center;
+    height: 10%;
+	position: fixed;
+    background-color: rgb(40, 49, 52);
+	width: 64.5vw;
+	left: 34vw;
+	top: 5px;
+	border-radius: 10px;
+	margin-left: 1vw;
+	margin-right: 0.5vw;
+}
+
+.fa-circle-arrow-down{
+    color:rgb(252, 252, 252);
+}
+
+#Arrows, #explore-premium{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.explore{
+	background-color: rgb(255, 255, 255);
+	font-family: font;
+	color: black;
+    font-size: 14.5px;
+	font-weight: light;
+	padding: 12px;
+	padding-bottom: 6px;
+	padding-top: 6.5px;
+	border-radius: 70px;
+}
+
+.explore:hover{
+	transform: scale(1.05);
+	background-color: rgb(246, 246, 246);
+}
+
+.install{
+	background-color: rgb(17, 21, 22);
+	color: rgb(252, 252, 252);
+	font-family: font;
+
+	font-size: 14.5px;
+	font-weight: light;
+	padding: 12px;
+	padding-bottom: 6px;
+	padding-top: 6.5px;
+	border-radius: 70px;
+	
+
+}
+
+.install:hover{
+	transform: scale(1.05);
+}
+
+.bell{
+	
+	
+	
+	height: 35px;
+	width: 35px;
+}
+.bell:hover{
+	content: url("Spotify assets/glow-bell.png");
+	transform: scale(1.05);
+
+}
+.about{
+	
+	height: 35px;
+	width: 35px;
+
+}
+.about:hover{
+	content: url("Spotify assets/glow-person.png");
+	transform: scale(1.05);
+}
+
+.l-arrow, .r-arrow{
+    height: 2rem;
+	width: 2rem;
+}
+
+.bell-tooltip-text{
+	visibility: hidden;
+	background-color: #303030;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 6.5vh;
+	left: -0.5vw;
+	z-index: 1;
+	font-family: "font";
+	border-radius: 5px;
+	font-size: 14px;
+
+}
+
+.hIcons:hover .bell-tooltip-text{
+	visibility: visible;
+}
+
+.about-tooltip-text{
+	visibility: hidden;
+	background-color: #303030;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 6.5vh;
+	left: -0.5vw;
+	z-index: 1;
+	font-family: "font";
+	border-radius: 5px;
+	font-size: 14px;
+
+}
+
+.hIcons:hover .about-tooltip-text{
+	visibility: visible;
 }
 .section1 {
 	width: 34%;
-	height: 18%;
+	height: 20%;
 	background-color: #121212;
 	border-radius: 10px;
 }
@@ -703,7 +840,7 @@ body {
 	transition: transform 0.3s;
 }
 .search:hover {
-	content: url("search-glow.png");
+	content: url("Spotify assets/search-glow.png");
 	transform: scale(1.0);
 }
 .section2 {
@@ -720,10 +857,9 @@ body {
 	left: 8%;
 	top: 4%;
 	transition: transform 0.3s;
-	cursor: pointer;
 }
 .lib:hover {
-	content: url("lib-glow.png");
+	content: url("Spotify assets/lib-glow.png");
 	transform: scale(1.0);
 }
 .lib-tooltip-text {
@@ -749,10 +885,9 @@ body {
 	top: 5%;
 	left: 80%;
 	transition: transform 0.3s;
-	cursor: pointer;
 }
 .plus:hover {
-	content: url("plus-glow.png");
+	content: url("Spotify assets/plus-glow.png");
 	transform: scale(1.0);
 }
 .plus-tooltip-text {
@@ -778,10 +913,9 @@ body {
 	top: 4.7%;
 	left: 90%;
 	transition: transform 0.3s;
-	cursor: pointer;
 }
 .arrow:hover {
-	content: url("arrow-glow.png");
+	content: url("Spotify assets/arrow-glow.png");
 	transform: scale(1.0);
 }
 .arrow-tooltip-text {
@@ -815,7 +949,6 @@ body {
 	top: 18%;
 	left: 6%;
 	font-size: 15px;
-	cursor: pointer;
 }
 .artists {
 	color: white;
@@ -831,7 +964,6 @@ body {
 	top: 18%;
 	left: 25%;
 	font-size: 15px;
-	cursor: pointer;
 }
 .scroll-bar .search12 {
 	width: 7%;
@@ -839,10 +971,9 @@ body {
 	top: 0%;
 	left: 6%;
 	transition: transform 0.3s;
-	cursor: pointer;
 }
 .search12:hover {
-	content: url("search-logo-glow.png");
+	content: url("Spotify assets/search-logo-glow.png");
 	transform: scale(1.0);
 }
 .search-tooltip {
@@ -868,10 +999,9 @@ body {
 	left: 78%;
 	width: 18%;
 	transition: transform 0.3s;
-	cursor: pointer;
 }
 .recent:hover {
-	content: url("recent-glow.png");
+	content: url("Spotify assets/recent-glow.png");
 	transform: scale(1);
 }
 .scroll-bar {
@@ -911,6 +1041,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .img1-text1 {
 	font-family: font;
@@ -943,6 +1074,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .img1-text3 {
 	font-family: font;
@@ -968,6 +1100,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .img1-text4 {
 	font-family: font;
@@ -981,6 +1114,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .bar4 {
 	position: absolute;
@@ -1015,9 +1149,12 @@ body {
 }
 #img5 {
 	width: 10%;
+	
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
+
 }
 .img1-text6 {
 	font-family: font;
@@ -1031,6 +1168,8 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
+
 }
 .bar6 {
 	position: absolute;
@@ -1056,6 +1195,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .bar7 {
 	position: absolute;
@@ -1081,6 +1221,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .img1-text9 {
 	font-family: font;
@@ -1106,6 +1247,7 @@ body {
 	position: absolute;
 	top: 20%;
 	left: 6.5%;
+	border-radius: 5px;
 }
 .bar9 {
 	position: absolute;
@@ -1118,9 +1260,4 @@ body {
 }
 .bar9:hover {
 	background-color: #232323;
-}
-input {
-	opacity: 0;
-	width: 0;
-	height: 0;
 }
