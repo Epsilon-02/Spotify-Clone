@@ -102,19 +102,6 @@ function follow()
     }
 }
 
-//Hovering Effect
-
-function Hover(text_id,flag){
-    const translateX = 0; 
-    const translateY = -10;  
-    element = document.getElementById(text_id,flag);
-    if(flag == false){
-        element.style.transform = `translate(${translateX}px, ${translateY}px)`;
-    }
-    else{
-        element.style.transform = `translate(${translateX}px, ${-translateY}px)`;
-    }
-}
 
 //show all and show less
 function show(text_show,text_button){
@@ -132,6 +119,7 @@ function show(text_show,text_button){
 
 // updating footer according to music selection
 function musicplay(text_img){
+
     let elem = document.getElementById(text_img);
     let old_img = elem.querySelector('img');
 
@@ -140,7 +128,9 @@ function musicplay(text_img){
     new_img.src = old_img.src;
 
     let songname = foot.querySelector('h2')
+    let singer = foot.querySelector('p')
     songname.innerHTML = elem.querySelector('.card_title').innerHTML;
+    singer.innerHTML = elem.querySelector('.card_subtitle').innerHTML;
 }
 function play(){
     const play=document.querySelector('.play');
@@ -151,3 +141,16 @@ function play(){
         document.querySelector('.play').innerHTML="Play";
     }
 }
+const date= new Date();
+let hours=date.getHours();
+const greet1=document.querySelectorAll(h2);
+if(hours<12 && hours>4){
+    greet1[0].innerHTML="Good Morning";
+}
+else if(hours>12 && hours<17){
+        greet1[0].innerHTML="Good Afternoon";
+}
+else{
+    greet1[0].innerHTML="Good Evening";
+}
+alert(greet1[0].innerHTML);
