@@ -23,6 +23,13 @@ html{
     background: #1FDF64;
 } */
 
+body{
+    display: grid;
+    grid-template-columns: 80px calc(100% - 80px);
+    grid-template-rows: 64px calc(100% - 72px) 72px;
+    padding: 8px;
+}
+
 /* --------this is main body--------------- */
 
 .container{
@@ -32,7 +39,9 @@ html{
     flex-direction: column;
     padding: 1.5rem;
     row-gap: 2rem;
-    padding-bottom: 5rem;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    overflow: auto;
 }
 
 /* Banner 
@@ -252,7 +261,6 @@ html{
     color: #fff;
     height: auto;
     row-gap: 1rem;
-    margin-bottom: 2rem;
 }
 
 .card_header{
@@ -381,17 +389,16 @@ html{
 /*--------this is footer section-----------*/
 
 
-footer{
-    position: fixed;
+.footer{
     background-color: black;
     height:72px;
-    width:100vw;
-    bottom:0px;
+    width:100%;
     color:white;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(1,1fr);
-    z-index: 1;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
 }
 
 #footerSong{
@@ -678,30 +685,12 @@ footer{
     cursor:pointer;
 }
 #cd1{
-    
-    grid-template-columns: repeat(7, 1fr);
-    height: 15em;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
     display: none;
 }
 #cd2{
-    
-    grid-template-columns: repeat(7, 1fr);
-    height: 15em;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
     display: none;
 }
 #cd3{
-    
-    grid-template-columns: repeat(7, 1fr);
-    height: 15em;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
     display: none;
 }
 
@@ -726,20 +715,33 @@ body {
 	position: relative;
 }
 
-header{
+/*---------header---------*/
+
+.header{
 	display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    column-gap: 40%;
-    align-items: center;
-    height: 10%;
-	position: fixed;
+    justify-content: space-between;
+    grid-template-columns: 70px 360px;
+    height: 64px;
+    z-index: 10;
     background-color: rgb(40, 49, 52);
-	width: 64.5vw;
-	left: 34vw;
-	top: 5px;
-	border-radius: 10px;
-	margin-left: 1vw;
-	margin-right: 0.5vw;
+	width: 100%;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0 1vw;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+@media (max-width: 1000px) {
+    .explore{
+        display: none;
+    }
+    .r-arrow{
+        display: none;
+    }
+    .header{
+    grid-template-columns: 70px 220px;
+    }
 }
 
 .fa-circle-arrow-down{
@@ -775,15 +777,14 @@ header{
 	background-color: rgb(17, 21, 22);
 	color: rgb(252, 252, 252);
 	font-family: font;
-
+    display: flex;
+    column-gap: 3px;
 	font-size: 14.5px;
 	font-weight: light;
 	padding: 12px;
 	padding-bottom: 6px;
 	padding-top: 6.5px;
 	border-radius: 70px;
-	
-
 }
 
 .install:hover{
@@ -791,16 +792,12 @@ header{
 }
 
 .bell{
-	
-	
-	
 	height: 35px;
 	width: 35px;
 }
 .bell:hover{
 	content: url("Spotify assets/glow-bell.png");
 	transform: scale(1.05);
-
 }
 .about{
 	

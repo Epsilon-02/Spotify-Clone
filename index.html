@@ -20,51 +20,106 @@
 
 <body>
 
-    <!---There are two major sections 1) 3 grids 2) footer-->
+    <!---There are two major sections 1) 3 divs (header, main body, footer) 2)toggle-->
 
 
-    <!--This grid is the main content-->
+    <!--This div is header-->
 
-    <header>
+    <div class="header">
+        <span id="Arrows">
+            <div><img src="Spotify assets/left-arrow.png" class="l-arrow"></div>
+            <div><img src="Spotify assets/right-arrow.png" class="r-arrow"></div>
+        </span>
 
-		<span id="Arrows">
-			<div><img src="Spotify assets/left-arrow.png" class="l-arrow"></div>
-			<div><img src="Spotify assets/right-arrow.png" class="r-arrow"></div>
-		</span>
-
-		<span id="explore-premium">
-			<div class="explore">Explore Premium</div>
-			<div class="install"><a class="fa-light fa-circle-arrow-down"></a>Install App</div>
-			<div class="hIcons"><img src="Spotify assets/bell.png" class="bell"><div class="bell-tooltip-text">What's New</div></div>
-			<div class="hIcons"><img src="Spotify assets/person.png" class="about"><div class="about-tooltip-text">Name</div></div>
-		</span>
-
-	</header>
-
-    <div class = "section1">
-		<a href = "index.html"><div class = "sec1-1"><img class = "home-logo" src = "Spotify assets/home.png"></img><div id = "home">Home</div></div></a>
-		<a href = "search.html"><img class = "search" src="Spotify assets/search.png"></img></a>
-	</div>
-	<div class = "section2">
-		<div id = "lib"><img class = "lib" src = "Spotify assets/lib.png"></img><div class = "lib-tooltip-text">Collapse Your Library</div></div>
-		<div id = "plus"><img class = "plus" src = "Spotify assets/plus.png"></img><div class = "plus-tooltip-text">Create Playlist or Folder</div></div>
-		<div id = "arrow"><img class = "arrow" src = "Spotify assets/arrow.png"></img><div class = "arrow-tooltip-text">Show More</div></div>
-		<div class = "playlist">Playlists</div>
-		<div class = "artists">Artists</div>
-		<div class = "scroll-bar">
-			<div id = "search2"><img class = "search12" src = "Spotify assets/search-logo.png"></img><div class = "search-tooltip">Search in Your Library</div></div>
-			<div id = "recent"><img src = "Spotify assets/recent.png" class = "recent"></img></div>
-			<a href = "playlist1.html"><div class = "bar1"><img id = "img1" class = "img1" src = "Spotify assets/liked-song.jpg"></img><div class = "img1-text1">Liked Songs</div></div></a>
-			<a href = "playlist2.html"><div class = "bar2"><img id = "img2" class = "img1" src = "Spotify assets/playlist1.jfif"></img><div class = "img1-text2">Liked Songs</div></div></a>
-			<a href = "playlist3.html"><div class = "bar3"><img id = "img3" class = "img1" src = "Spotify assets/playlist2.jfif"></img><div class = "img1-text3">Liked Songs</div></div></a>
-			<a href = "playlist4.html"><div class = "bar4"><img id = "img4" class = "img1" src = "Spotify assets/playlist3.jfif"></img><div class = "img1-text4">Liked Songs</div></div></a>
-			<a href = "playlist5.html"><div class = "bar5"><img id = "img5" class = "img1" src = "Spotify assets/liked-song.jpg"></img><div class = "img1-text5">Liked Songs</div></div></a>
-			<a href = "playlist6.html"><div class = "bar6"><img id = "img6" class = "img1" src = "Spotify assets/liked-song.jpg"></img><div class = "img1-text6">Liked Songs</div></div></a>
-			<a href = "playlist7.html"><div class = "bar7"><img id = "img7" class = "img1" src = "Spotify assets/liked-song.jpg"></img><div class = "img1-text7">Liked Songs</div></div></a>
-			<a href = "playlist8.html"><div class = "bar8"><img id = "img8" class = "img1" src = "Spotify assets/liked-song.jpg"></img><div class = "img1-text8">Liked Songs</div></div></a>
-			<a href = "playlist9.html"><div class = "bar9"><img id = "img9" class = "img1" src = "Spotify assets/liked-song.jpg"></img><div class = "img1-text9">Liked Songs</div></div></a>
-		</div>
-	</div>
+        <span id="explore-premium">
+            <div class="explore">Explore Premium</div>
+            <div class="install"><i class='bx bx-down-arrow-circle'></i>Install App</div>
+            <div class="hIcons"><img src="Spotify assets/bell.png" class="bell">
+                <div class="bell-tooltip-text">What's New</div>
+            </div>
+            <div class="hIcons"><img src="Spotify assets/person.png" class="about">
+                <div class="about-tooltip-text">Name</div>
+            </div>
+        </span>
+    </div>
+    
+    <!-- This div is toggle bar -->
+    <!-- <div class="toggle_bar">
+        <div class="section1">
+            <a href="index.html">
+                <div class="sec1-1"><img class="home-logo" src="Spotify assets/home.png"></img>
+                    <div id="home">Home</div>
+                </div>
+            </a>
+            <a href="search.html"><img class="search" src="Spotify assets/search.png"></img></a>
+        </div>
+        <div class="section2">
+            <div id="lib"><img class="lib" src="Spotify assets/lib.png"></img>
+                <div class="lib-tooltip-text">Collapse Your Library</div>
+            </div>
+            <div id="plus"><img class="plus" src="Spotify assets/plus.png"></img>
+                <div class="plus-tooltip-text">Create Playlist or Folder</div>
+            </div>
+            <div id="arrow"><img class="arrow" src="Spotify assets/arrow.png"></img>
+                <div class="arrow-tooltip-text">Show More</div>
+            </div>
+            <div class="playlist">Playlists</div>
+            <div class="artists">Artists</div>
+            <div class="scroll-bar">
+                <div id="search2"><img class="search12" src="Spotify assets/search-logo.png"></img>
+                    <div class="search-tooltip">Search in Your Library</div>
+                </div>
+                <div id="recent"><img src="Spotify assets/recent.png" class="recent"></img></div>
+                <a href="playlist1.html">
+                    <div class="bar1"><img id="img1" class="img1" src="Spotify assets/liked-song.jpg"></img>
+                        <div class="img1-text1">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist2.html">
+                    <div class="bar2"><img id="img2" class="img1" src="Spotify assets/playlist1.jfif"></img>
+                        <div class="img1-text2">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist3.html">
+                    <div class="bar3"><img id="img3" class="img1" src="Spotify assets/playlist2.jfif"></img>
+                        <div class="img1-text3">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist4.html">
+                    <div class="bar4"><img id="img4" class="img1" src="Spotify assets/playlist3.jfif"></img>
+                        <div class="img1-text4">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist5.html">
+                    <div class="bar5"><img id="img5" class="img1" src="Spotify assets/liked-song.jpg"></img>
+                        <div class="img1-text5">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist6.html">
+                    <div class="bar6"><img id="img6" class="img1" src="Spotify assets/liked-song.jpg"></img>
+                        <div class="img1-text6">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist7.html">
+                    <div class="bar7"><img id="img7" class="img1" src="Spotify assets/liked-song.jpg"></img>
+                        <div class="img1-text7">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist8.html">
+                    <div class="bar8"><img id="img8" class="img1" src="Spotify assets/liked-song.jpg"></img>
+                        <div class="img1-text8">Liked Songs</div>
+                    </div>
+                </a>
+                <a href="playlist9.html">
+                    <div class="bar9"><img id="img9" class="img1" src="Spotify assets/liked-song.jpg"></img>
+                        <div class="img1-text9">Liked Songs</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- This div is main body -->
     <div class="container">
 
         <!-- <div class="banner">
@@ -79,7 +134,7 @@
                         <i class='bx bx-dots-horizontal-rounded'></i>
                     </div>
                 </div> -->
-       
+
         <section class="greeting">
             <div id="hrList">
                 <h2> Good evening</h2>
@@ -127,31 +182,31 @@
                     <div class="card_title">Soft 10s</div>
                     <div class="card_subtitle">2010s Melodies</div>
                 </div>
-                <div class="card" id="cardid_3"  onclick="musicplay('cardid_3')">
+                <div class="card" id="cardid_3" onclick="musicplay('cardid_3')">
                     <div class="card_img"><img src="Spotify assets/happy-beats.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Happy Beats</div>
                     <div class="card_subtitle">Feel-good music!</div>
                 </div>
-                <div class="card" id="cardid_4"  onclick="musicplay('cardid_4')">
+                <div class="card" id="cardid_4" onclick="musicplay('cardid_4')">
                     <div class="card_img"><img src="Spotify assets/faded.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Faded</div>
                     <div class="card_subtitle">Alan Walker</div>
                 </div>
-                <div class="card cardnone3" id="cardid_5"  onclick="musicplay('cardid_5')">
+                <div class="card cardnone3" id="cardid_5" onclick="musicplay('cardid_5')">
                     <div class="card_img"><img src="Spotify assets/this-is-arijit.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">This is Arijit Singh</div>
                     <div class="card_subtitle">Essential tracks</div>
                 </div>
-                <div class="card cardnone2" id="cardid_6"  onclick="musicplay('cardid_6')">
+                <div class="card cardnone2" id="cardid_6" onclick="musicplay('cardid_6')">
                     <div class="card_img"><img src="Spotify assets/the-nights.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">The Nights</div>
                     <div class="card_subtitle">Avicii</div>
                 </div>
-                <div class="card cardnone1" id="cardid_7"  onclick="musicplay('cardid_7')">
+                <div class="card cardnone1" id="cardid_7" onclick="musicplay('cardid_7')">
                     <div class="card_img"><img src="Spotify assets/podcast.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">TED Tech</div>
@@ -160,25 +215,25 @@
             </div>
             <br>
             <div class="cardContainer" id="cd1">
-                <div class="card" id="cardid_8"  onclick="musicplay('cardid_8')">
+                <div class="card" id="cardid_8" onclick="musicplay('cardid_8')">
                     <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <div class="card" id="cardid_9"  onclick="musicplay('cardid_9')">
+                <div class="card" id="cardid_9" onclick="musicplay('cardid_9')">
                     <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <div class="card" id="cardid_10"  onclick="musicplay('cardid_10')">
+                <div class="card" id="cardid_10" onclick="musicplay('cardid_10')">
                     <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <!-- <div class="card" id="cardid_11"  onclick="musicplay('cardid_11')">
+                <div class="card" id="cardid_11"  onclick="musicplay('cardid_11')">
                     <div class="card_img"><img src="Spotify assets/eternal.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
@@ -201,7 +256,7 @@
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
-                </div> -->
+                </div>
             </div>
         </section>
 
@@ -211,43 +266,43 @@
                 <h6><button onclick="show('cd2','show2')" class="show" id="show2"><b>Show all</b></button></h6>
             </div>
             <div class="cardContainer">
-                <div class="card" id="cardid_15"  onclick="musicplay('cardid_15')">
+                <div class="card" id="cardid_15" onclick="musicplay('cardid_15')">
                     <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Top hits!</div>
                     <div class="card_subtitle">Singer</div>
                 </div>
-                <div class="card" id="cardid_16"  onclick="musicplay('cardid_16')">
+                <div class="card" id="cardid_16" onclick="musicplay('cardid_16')">
                     <div class="card_img"><img src="Spotify assets/top-global.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Global hits!</div>
                     <div class="card_subtitle">Most played tracks</div>
                 </div>
-                <div class="card" id="cardid_17"  onclick="musicplay('cardid_17')">
+                <div class="card" id="cardid_17" onclick="musicplay('cardid_17')">
                     <div class="card_img"><img src="Spotify assets/bollywood-hits.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Bollywood hits!</div>
                     <div class="card_subtitle">Arijit Singh, Arko</div>
                 </div>
-                <div class="card" id="cardid_18"  onclick="musicplay('cardid_18')">
+                <div class="card" id="cardid_18" onclick="musicplay('cardid_18')">
                     <div class="card_img"><img src="Spotify assets/tth.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Today's Top Hits!</div>
                     <div class="card_subtitle">Selena Gomez</div>
                 </div>
-                <div class="card cardnone3" id="cardid_19"  onclick="musicplay('cardid_19')">
+                <div class="card cardnone3" id="cardid_19" onclick="musicplay('cardid_19')">
                     <div class="card_img"><img src="Spotify assets/tamil-hits.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Tamil hits!</div>
                     <div class="card_subtitle">By Spotify</div>
                 </div>
-                <div class="card cardnone2" id="cardid_20"  onclick="musicplay('cardid_20')">
+                <div class="card cardnone2" id="cardid_20" onclick="musicplay('cardid_20')">
                     <div class="card_img"><img src="Spotify assets/punjabi.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Punjabi Hot Hits!</div>
                     <div class="card_subtitle">By Spotify</div>
                 </div>
-                <div class="card cardnone1" id="cardid_21"  onclick="musicplay('cardid_21')">
+                <div class="card cardnone1" id="cardid_21" onclick="musicplay('cardid_21')">
                     <div class="card_img"><img src="Spotify assets/justin.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">This is Bieber!</div>
@@ -256,31 +311,31 @@
             </div>
             <br>
             <div class="cardContainer" id="cd2">
-                <div class="card" id="cardid_22"  onclick="musicplay('cardid_22')">
+                <div class="card" id="cardid_22" onclick="musicplay('cardid_22')">
                     <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Top hits!</div>
                     <div class="card_subtitle">Singer</div>
                 </div>
-                <div class="card" id="cardid_23"  onclick="musicplay('cardid_23')">
+                <div class="card" id="cardid_23" onclick="musicplay('cardid_23')">
                     <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Top hits!</div>
                     <div class="card_subtitle">Singer</div>
                 </div>
-                <div class="card" id="cardid_24"  onclick="musicplay('cardid_24')">
+                <div class="card" id="cardid_24" onclick="musicplay('cardid_24')">
                     <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Top hits!</div>
                     <div class="card_subtitle">Singer</div>
                 </div>
-                <div class="card" id="cardid_25"  onclick="musicplay('cardid_25')">
+                <div class="card" id="cardid_25" onclick="musicplay('cardid_25')">
                     <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Top hits!</div>
                     <div class="card_subtitle">Singer</div>
                 </div>
-                <div class="card cardnone3" id="cardid_26"  onclick="musicplay('cardid_26')">
+                <div class="card cardnone3" id="cardid_26" onclick="musicplay('cardid_26')">
                     <div class="card_img"><img src="Spotify assets/top.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Top hits!</div>
@@ -307,43 +362,43 @@
                 <h6><button onclick="show('cd3','show3')" class="show" id="show3"><b>Show all</b></button></h6>
             </div>
             <div class="cardContainer">
-                <div class="card" id="cardid_29"  onclick="musicplay('cardid_29')">
+                <div class="card" id="cardid_29" onclick="musicplay('cardid_29')">
                     <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 1</div>
                     <div class="card_subtitle">Billie Elish</div>
                 </div>
-                <div class="card" id="cardid_30"  onclick="musicplay('cardid_30')">
+                <div class="card" id="cardid_30" onclick="musicplay('cardid_30')">
                     <div class="card_img"><img src="Spotify assets/mix1.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 1</div>
                     <div class="card_subtitle">Taylor Swift, Zedd</div>
                 </div>
-                <div class="card" id="cardid_31"  onclick="musicplay('cardid_31')">
+                <div class="card" id="cardid_31" onclick="musicplay('cardid_31')">
                     <div class="card_img"><img src="Spotify assets/mix2.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 2</div>
                     <div class="card_subtitle">Bad Bunny, Mora</div>
                 </div>
-                <div class="card" id="cardid_32"  onclick="musicplay('cardid_32')">
+                <div class="card" id="cardid_32" onclick="musicplay('cardid_32')">
                     <div class="card_img"><img src="Spotify assets/default.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 3</div>
                     <div class="card_subtitle">Eminem </div>
                 </div>
-                <div class="card cardnone3" id="cardid_33"  onclick="musicplay('cardid_33')">
+                <div class="card cardnone3" id="cardid_33" onclick="musicplay('cardid_33')">
                     <div class="card_img"><img src="Spotify assets/mix4.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 4</div>
                     <div class="card_subtitle">Pritam and more</div>
                 </div>
-                <div class="card cardnone2" id="cardid_34"  onclick="musicplay('cardid_34')">
+                <div class="card cardnone2" id="cardid_34" onclick="musicplay('cardid_34')">
                     <div class="card_img"><img src="Spotify assets/mix5.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 5</div>
                     <div class="card_subtitle">One Direction</div>
                 </div>
-                <div class="card cardnone1" id="cardid_35"  onclick="musicplay('cardid_35')">
+                <div class="card cardnone1" id="cardid_35" onclick="musicplay('cardid_35')">
                     <div class="card_img"><img src="Spotify assets/mix6.jfif" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Daily Mix 6</div>
@@ -352,7 +407,7 @@
             </div>
             <br>
             <div class="cardContainer" id="cd3">
-                <div class="card" id="cardid_36"  onclick="musicplay('cardid_36')">
+                <div class="card" id="cardid_36" onclick="musicplay('cardid_36')">
                     <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
@@ -365,25 +420,25 @@
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <div class="card" id="cardid_38"  onclick="musicplay('cardid_38')">
+                <div class="card" id="cardid_38" onclick="musicplay('cardid_38')">
                     <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <div class="card" id="cardid_39"  onclick="musicplay('cardid_39')">
+                <div class="card" id="cardid_39" onclick="musicplay('cardid_39')">
                     <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <div class="card cardnone3" id="cardid_40"  onclick="musicplay('cardid_40')">
+                <div class="card cardnone3" id="cardid_40" onclick="musicplay('cardid_40')">
                     <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
                     <div class="card_subtitle">Just let it go!</div>
                 </div>
-                <div class="card cardnone2" id="cardid_41"  onclick="musicplay('cardid_41')">
+                <div class="card cardnone2" id="cardid_41" onclick="musicplay('cardid_41')">
                     <div class="card_img"><img src="Spotify assets/mix.jpg" alt=""><span id="play-button"><i
                                 class="fa-solid fa-circle-play"></i></span></div>
                     <div class="card_title">Eternal Bliss</div>
@@ -397,15 +452,11 @@
                 </div>
             </div>
         </section>
-
-        <section class="spotify_footer">
-
-        </section>
     </div>
-    <br>
+    
 
-    <footer>
-
+    <div class="footer">
+    
         <div id="footerSong">
             <span style="position: relative; text-align: center;">
                 <img src="media/Demo.jpg" alt="Song poster">
@@ -463,7 +514,7 @@
             </div>
         </div>
 
-    </footer>
+    </div>
 
     <script type="text/javascript" src="index.js"></script>
 </body>
