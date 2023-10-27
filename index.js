@@ -102,19 +102,6 @@ function follow()
     }
 }
 
-//Hovering Effect
-
-function Hover(text_id,flag){
-    const translateX = 0; 
-    const translateY = -10;  
-    element = document.getElementById(text_id,flag);
-    if(flag == false){
-        element.style.transform = `translate(${translateX}px, ${translateY}px)`;
-    }
-    else{
-        element.style.transform = `translate(${translateX}px, ${-translateY}px)`;
-    }
-}
 
 //show all and show less
 function show(text_show,text_button){
@@ -132,6 +119,7 @@ function show(text_show,text_button){
 
 // updating footer according to music selection
 function musicplay(text_img){
+
     let elem = document.getElementById(text_img);
     let old_img = elem.querySelector('img');
 
@@ -140,7 +128,9 @@ function musicplay(text_img){
     new_img.src = old_img.src;
 
     let songname = foot.querySelector('h2')
+    let singer = foot.querySelector('p')
     songname.innerHTML = elem.querySelector('.card_title').innerHTML;
+    singer.innerHTML = elem.querySelector('.card_subtitle').innerHTML;
 }
 function play(){
     const play=document.querySelector('.play');
