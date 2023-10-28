@@ -569,7 +569,15 @@ body{
 #cd3{
     display: none;
 }
-
+#cd4{
+    display: none;
+}
+#cd5{
+    display: none;
+}
+#cd6{
+    display: none;
+}
 @media (max-width:800px){
 
     /*------------------------this is footer section-----------------*/
