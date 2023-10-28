@@ -143,14 +143,14 @@ function play(){
 }
 const date= new Date();
 let hours=date.getHours();
-const greet1=document.querySelectorAll(h2);
-if(hours<12 && hours>4){
-    greet1[0].innerHTML="Good Morning";
+const greet1=document.querySelector('h2');
+if(hours<12 || hours>4){
+    greet1.innerHTML="Good Morning";
 }
-else if(hours>12 && hours<17){
-        greet1[0].innerHTML="Good Afternoon";
+else if(hours>12 || hours<17){
+        greet1.innerHTML="Good Afternoon";
 }
 else{
-    greet1[0].innerHTML="Good Evening";
+    greet1.innerHTML="Good Evening";
 }
-alert(greet1[0].innerHTML);
+
