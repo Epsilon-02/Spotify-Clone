@@ -144,10 +144,10 @@ function play(){
 const date= new Date();
 let hours=date.getHours();
 const greet1=document.querySelector('h2');
-if(hours<12 || hours>4){
+if(hours<12 && hours>4){
     greet1.innerHTML="Good Morning";
 }
-else if(hours>12 || hours<17){
+else if(hours>12 && hours<17){
         greet1.innerHTML="Good Afternoon";
 }
 else{
