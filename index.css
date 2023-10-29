@@ -26,7 +26,7 @@ html{
 body{
     display: grid;
     grid-template-columns: auto calc(100% - auto);
-    grid-template-rows: 64px calc(100% - 72px) 72px;
+    grid-template-rows: 64px calc(100% - 63px) 72px;
     padding: 8px;
 }
 
@@ -731,7 +731,7 @@ body {
 	visibility: visible;
 }
 
-/*------------toggle bar---------*/
+/*------------toggle bar-----------*/
 
 .toggle_bar{
     grid-row: 1 / 3;
