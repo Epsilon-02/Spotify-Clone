@@ -132,6 +132,7 @@ function musicplay(text_img){
     songname.innerHTML = elem.querySelector('.card_title').innerHTML;
     singer.innerHTML = elem.querySelector('.card_subtitle').innerHTML;
 }
+
 function play(){
     const play=document.querySelector('.play');
     if(play.innerHTML=="Play"){
@@ -153,4 +154,30 @@ else if(hours>12 && hours<17){
 else{
     greet1.innerHTML="Good Evening";
 }
+
+
+let search = document.getElementById('searchtxt');
+search.addEventListener('input',Search);
+
+
+// IMPORTANT CODE FOR SEARCH FUNCTIONALITY
+
+function Search(){
+    let search_txt = search.value.toLowerCase();
+    let cards = document.getElementsByClassName('card'); 
+    Array.from(cards).forEach(function(element){ 
+        let card_txt = element.innerHTML.toLowerCase(); 
+        
+
+        if(card_txt.includes(search_txt)){ // searching
+            element.style.display = "block";
+        }
+        else{
+            element.style.display = "none";
+        }
+        
+    })
+
+}
+
 
