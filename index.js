@@ -132,6 +132,7 @@ function musicplay(text_img){
     songname.innerHTML = elem.querySelector('.card_title').innerHTML;
     singer.innerHTML = elem.querySelector('.card_subtitle').innerHTML;
 }
+
 function play(){
     const play=document.querySelector('.play');
     if(play.innerHTML=="Play"){
@@ -153,4 +154,31 @@ else if(hours>12 && hours<17){
 else{
     greet1.innerHTML="Good Evening";
 }
+
+
+let search = document.getElementById('searchtxt');
+search.addEventListener('input',Search);
+
+
+// IMPORTANT CODE FOR SEARCH FUNCTIONALITY
+
+function Search(){
+    let search_txt = search.value.toLowerCase(); // Converting for better search
+    let cards = document.getElementsByClassName('card'); // getting  all the created notes object
+    console.log(cards);
+    Array.from(cards).forEach(function(element){ // converting object to array where element represents each index value
+        let card_txt = element.innerHTML.toLowerCase(); //since content is inside <p> tag so fetching from it. [0] represents in array of all <p> tags element select first one
+        
+
+        if(card_txt.includes(search_txt)){ // searching
+            element.style.display = "block";
+        }
+        else{
+            element.style.display = "none";
+        }
+        
+    })
+
+}
+
 

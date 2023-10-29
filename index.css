@@ -23,18 +23,506 @@ html{
     background: #1FDF64;
 } */
 
-body{
-    display: grid;
-    grid-template-columns: auto calc(100% - auto);
-    grid-template-rows: 64px calc(100% - 72px) 72px;
-    padding: 8px;
-}
 
 /* --------this is main body--------------- */
+.main-container{
+    display: flex;
+    justify-content: space-between;
+}
+.col1{
+    flex-basis: 25%;
+}
 
+.toggle_bar{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-row: 1/3;
+    grid-column: 1 / 2;
+    width: auto;
+    z-index: -1;
+}
+
+.section1{
+    padding: auto;
+    border-radius: 10px;
+    position: fixed;
+    flex-basis: 20%;
+    background-color: rgb(18,18,18);
+    width: 25%;
+    height: 20%;
+    box-sizing: border-box;
+    padding: 15px;
+    
+    
+}
+.sec1-1{
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.img-sec{
+    flex-basis: 10%;
+
+}
+.img-sec img{
+    width: 80%;
+}
+.home-sec{
+    flex-basis: 85%;
+    font-size: 20px;
+}
+.sec1-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    flex-basis: 10%;
+}
+.search-in{
+    flex-basis: 85%;
+}
+.search-in input{
+    background-color:  rgb(18,18,18);
+    height: 85%;
+    width: 70%;
+    border: 0px;
+    font-size: 20px;
+}
+
+.section2{
+    position: fixed;
+    border-radius: 10px;
+    flex-basis: 80%;
+    background-color: rgb(18,18,18);
+    width: 25%;
+    height: 79%;
+    top: 21%;
+    
+}
+.lib {
+	width: 30%;
+	position: absolute;
+	left: 8%;
+	top: 4%;
+	transition: transform 0.3s;
+}
+.lib:hover {
+	content: url("Spotify assets/lib-glow.png");
+	transform: scale(1.0);
+}
+.lib-tooltip-text {
+	visibility: hidden;
+	background-color: #303030;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: -4%;
+	left: 6%;
+	z-index: 1;
+	font-family: "font";
+	border-radius: 5px;
+	font-size: 14px;
+}
+#lib:hover .lib-tooltip-text {
+	visibility: visible;
+}
+.plus {
+	width: 4.5%;
+	position: absolute;
+	top: 5%;
+	left: 80%;
+	transition: transform 0.3s;
+}
+.plus:hover {
+	content: url("Spotify assets/plus-glow.png");
+	transform: scale(1.0);
+}
+.plus-tooltip-text {
+	visibility: hidden;
+	background-color: #303030;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: -4%;
+	left: 60%;
+	z-index: 1;
+	font-family: "font";
+	border-radius: 5px;
+	font-size: 14px;
+}
+#plus:hover .plus-tooltip-text{
+	visibility: visible;
+}
+.arrow {
+	width: 6.3%;
+	position: absolute;
+	top: 4.7%;
+	left: 90%;
+	transition: transform 0.3s;
+}
+.arrow:hover {
+	content: url("Spotify assets/arrow-glow.png");
+	transform: scale(1.0);
+}
+.arrow-tooltip-text {
+	visibility: hidden;
+	background-color: #303030;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: -4%;
+	left: 80%;
+	z-index: 1;
+	font-family: "font";
+	border-radius: 5px;
+	font-size: 14px;
+}
+#arrow:hover .arrow-tooltip-text{
+	visibility: visible;
+}
+.playlist {
+	color: white;
+	font-family: font;
+	background-color: #232323;
+	text-align: center;
+	border-radius: 35px;
+	position: absolute;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	top: 18%;
+	left: 3%;
+	font-size: 15px;
+}
+.artists {
+	color: white;
+	font-family: font;
+	background-color: #232323;
+	text-align: center;
+	border-radius: 35px;
+	position: absolute;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	top: 18%;
+	left: 25%;
+	font-size: 15px;
+}
+.scroll-bar .search12 {
+	width: 7%;
+	position: absolute;
+	top: 0%;
+	left: 6%;
+	transition: transform 0.3s;
+}
+.search12:hover {
+	content: url("Spotify assets/search-logo-glow.png");
+	transform: scale(1.0);
+}
+.search-tooltip {
+	visibility: hidden;
+	background-color: #303030;
+	padding: 5px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 0%;
+	left: 1%;
+	z-index: 2;
+	font-family: "font";
+	border-radius: 5px;
+	font-size: 14px;
+}
+#search2:hover .search-tooltip{
+	visibility: visible;
+}
+.recent {
+	position: absolute;
+	top: 0%;
+	left: 78%;
+	width: 18%;
+	transition: transform 0.3s;
+}
+.recent:hover {
+	content: url("Spotify assets/recent-glow.png");
+	transform: scale(1);
+}
+.scroll-bar {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	height: 80%;
+	position: relative;
+	top: 30%;
+	transition: overflow-y 0.3s;
+}
+.scroll-bar:hover {
+	overflow-y: auto;
+}
+.scroll-bar::-webkit-scrollbar {
+	width: 10%;
+}
+.scroll-bar::-webkit-scrollbar-thumb {
+	color: #121212;
+}
+.scroll-bar::-webkit-scrollbar-thumb:hover {
+	color: gray;
+}
+.bar1 {
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar1:hover {
+	background-color: #232323;
+}
+#img1 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.img1-text1 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 43%;
+	left: 20%;
+}
+.img1-text2 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 40%;
+	left: 20%;
+}
+.bar2 {
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar2:hover {
+	background-color: #232323;
+}
+#img2 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.img1-text3 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 45%;
+	left: 20%;
+}
+.bar3 {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar3:hover {
+	background-color: #232323;
+}
+#img3 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.img1-text4 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 45%;
+	left: 20%;
+}
+#img4 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.bar4 {
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar4:hover {
+	background-color: #232323;
+}
+.bar5 {
+	position: absolute;
+	top: 90%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar5:hover {
+	background-color: #232323;
+}
+.img1-text5 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 40%;
+	left: 20%;
+}
+#img5 {
+	width: 10%;
+	
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+
+}
+.img1-text6 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 43%;
+	left: 20%;
+}
+#img6 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+
+}
+.bar6 {
+	position: absolute;
+	top: 110%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar6:hover {
+	background-color: #232323;
+}
+.img1-text7 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 43%;
+	left: 20%;
+}
+#img7 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.bar7 {
+	position: absolute;
+	top: 130%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar7:hover {
+	background-color: #232323;
+}
+.img1-text8 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 43%;
+	left: 20%;
+}
+#img8 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.img1-text9 {
+	font-family: font;
+	color: white;
+	position: absolute;
+	top: 43%;
+	left: 20%;
+}
+.bar8 {
+	position: absolute;
+	top: 150%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar8:hover {
+	background-color: #232323;
+}
+#img9 {
+	width: 10%;
+	position: absolute;
+	top: 20%;
+	left: 6.5%;
+	border-radius: 5px;
+}
+.bar9 {
+	position: absolute;
+	top: 170%;
+	width: 100%;
+	height: 20%;
+	background-color: #121212; 
+	transition: background-color 0.3s;
+	z-index: 1;
+}
+.bar9:hover {
+	background-color: #232323;
+}
+
+
+.col2{
+    flex-basis: 74.6%;
+}
 .container{
     padding: 0.5rem;
-    background: linear-gradient(rgb(40, 49, 52), 30%, rgb(18, 18, 18));
+    background-color: rgb(18,18,18);
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
@@ -137,6 +625,7 @@ body{
     color: #fff;
     height: auto;
     row-gap: 1rem;
+    margin-bottom: 15px;
 }
 
 .card_header{
@@ -153,6 +642,7 @@ body{
 .card_header h3{
     font-weight: 900;
     font-size: 1.2em;
+    margin-top: 15px;
 }
 
 .card_header h6{
@@ -168,6 +658,7 @@ body{
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .card{
@@ -267,14 +758,19 @@ body{
 
 .footer{
     background-color: black;
-    height:72px;
+    height: 72px;
     width:100%;
+
     color:white;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(1,1fr);
     grid-row: 3 / 4;
     grid-column: 1 / 3;
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    
 }
 
 #footerSong{
@@ -453,15 +949,18 @@ body{
     width:auto;
 }
 
-.musicSlider{
-    height:3px;
+#fp2 hr{
+    height:3.5px;
     width:25vw;
     border:none;
     background-color: white;
     margin:5px;
     border-radius: 15px;
     margin-top: 10px;
-    accent-color: var(--green);
+}
+
+#fp2 hr:hover{
+    background-color:#1FDF64;
 }
 
 .fpr:hover{
@@ -509,16 +1008,19 @@ body{
     position:relative;
 }
 
-.volumeSlider{
+#footerTools div hr{
     width:80px;
     background-color:white;
-    height: 3px;
+    height: 3.5px;
     border:none;
     border-radius: 5px;
     margin:auto;
     margin-left:5px;
     margin-right: 15px;
-    accent-color: var(--green);
+}
+
+#footerTools div hr:hover{
+    background-color: #1FDF64;
 }
 
 .message{
@@ -572,6 +1074,7 @@ body{
 #cd6{
     display: none;
 }
+
 @media (max-width:800px){
 
     /*------------------------this is footer section-----------------*/
@@ -734,7 +1237,6 @@ body {
 }
 
 /*------------toggle bar---------*/
-
 .toggle_bar{
     grid-row: 1 / 3;
     grid-column: 1 / 2;
