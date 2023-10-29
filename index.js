@@ -163,11 +163,10 @@ search.addEventListener('input',Search);
 // IMPORTANT CODE FOR SEARCH FUNCTIONALITY
 
 function Search(){
-    let search_txt = search.value.toLowerCase(); // Converting for better search
-    let cards = document.getElementsByClassName('card'); // getting  all the created notes object
-    console.log(cards);
-    Array.from(cards).forEach(function(element){ // converting object to array where element represents each index value
-        let card_txt = element.innerHTML.toLowerCase(); //since content is inside <p> tag so fetching from it. [0] represents in array of all <p> tags element select first one
+    let search_txt = search.value.toLowerCase();
+    let cards = document.getElementsByClassName('card'); 
+    Array.from(cards).forEach(function(element){ 
+        let card_txt = element.innerHTML.toLowerCase(); 
         
 
         if(card_txt.includes(search_txt)){ // searching
